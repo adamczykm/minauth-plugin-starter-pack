@@ -78,7 +78,12 @@ export class SimplePlugin
     this.logger.debug("entering verifyAndGetOutput");
 
     // Extract the hash from the proof's public input
-    const provedHash = inp.proof.publicInput.toString();
+    const provedHash = inp.proof.publicInput[0];
+    this.logger.debug("=======================");
+    this.logger.debug("Proved hash: ", provedHash);
+    this.logger.debug("public input", inp.proof.publicInput);
+    this.logger.debug("white list", this.hashWhitelist);
+
     const tag = this.hashWhitelist[provedHash];
 
     // Only allow hashes that are in the whitelist
