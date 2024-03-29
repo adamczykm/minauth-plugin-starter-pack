@@ -5,7 +5,7 @@ This repository contains a 'plugin starter template' and also can be considered 
 
 ## Usage
 
-If you are not sure how to write a MinAuth plugin read this guide, the in-code documentation and check out implementations available in the main MinAuth [https://github.com/mlabs-haskell/MinAuth](repository). Then set up the template for the plugin:
+If you are not sure how to write a MinAuth plugin read this guide, the in-code documentation and check out implementations available in the main MinAuth [repository](https://github.com/mlabs-haskell/MinAuth). Then set up the template for the plugin:
 
 ```bash
 git clone https://github.com/adamczykm/minauth-plugin-starter-pack
@@ -20,7 +20,7 @@ A MinAuth plugin is minimally a typescript package that has a specific structure
 A plugin (or a verifier) and prover are two distinct parts of a MinAuth plugin. Plugin is usually meant to work server-side (providing data and verifying proofs of authorization) while prover is client-side (understanding data, user input, generating and submitting proofs), and since MinAuth is mostly about connecting web3 authorization means to web2 resources we will stick to the usual web2 server-client architecture.
 The two are meant to cooperate to provide seamless experience for both server-side MinAuth users and browser-side service users.
 
-### Remarks on MinAuth plugin's safety
+### Remarks on MinAuth plugins' safety
 
 MinAuth has no means to ensure that 3rd party plugins are secure to use and don't leak secrets or track its users. As a MinAuth user always be sure to trust authors of plugins you use or audit their code. As a MinAuth plugin author make sure that you test your code thoroughly and understand the data and its flow involved during using your plugin. Some solutions may be prone to some  attacks even if they have not bugs per-se.
 
@@ -175,3 +175,8 @@ In case of any doubts or questions one is encouraged to ask questions in this re
 ## Using the plugin
 
 To see how the plugin can be used with express.js and passport.js consult the demo project in the main MinAuth repository [here](https://github.com/mlabs-haskell/minauth).
+
+## Credits
+
+The work necessary to create this project and the MinAuth library itself was mainly sponsored by MINA ZkIgnite and MINA Navigators grant programs.
+Learn more about MINA here: https://minaprotocol.com/
