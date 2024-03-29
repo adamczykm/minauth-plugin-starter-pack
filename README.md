@@ -3,6 +3,17 @@
 MinAuth is an authentication library that integrates with passport.js (probably more options in the future) and a framework for building "plugins" that extend and provide its authentication functionality. This architecture allows it to be highly customizable and easily malleable to one's needs given that one can either adapt an existing plugin or create one on their own.
 This repository contains a 'plugin starter template' and also can be considered a 'create-your-own-minauth-plugin' guide.
 
+## Usage
+
+If you are not sure how to write a MinAuth plugin read this guide, the in-code documentation and check out implementations available in the main MinAuth [https://github.com/mlabs-haskell/MinAuth](repository). Then set up the template for the plugin:
+
+```bash
+git clone https://github.com/adamczykm/minauth-plugin-starter-pack
+cd minauth-plugin-starter-pack
+sh start.sh
+npm run build
+```
+
 ## A MinAuth plugin
 
 A MinAuth plugin is minimally a typescript package that has a specific structure and implements required interfaces. Technically can be any Typescript package that contains `plugin.ts` and `prover.ts` of which default exports implement `IMinAuthPlugin` (and `IMinAuthPluginFactory`) and `IMinAuthProver` correspondingly.
