@@ -184,11 +184,13 @@ export class SimplePlugin
   readonly customRoutes = Router();
 }
 
-// sanity check
+// Additional type-checker test to ensure that the plugin satisfies
+// the factory interface
 SimplePlugin satisfies IMinAuthPluginFactory<
   TsInterfaceType,
   SimplePlugin,
   Configuration
 >;
 
+// The plugin.ts module should export the plugin factory as default
 export default SimplePlugin;
